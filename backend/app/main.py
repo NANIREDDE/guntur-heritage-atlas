@@ -1,7 +1,14 @@
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 
-app = FastAPI(title="Guntur Heritage Atlas API", version="0.2.0")
+from .database import engine
+from .dependencies import get_db
+from .models import Base, Temple
+from .schemas import TempleDetail, TempleSummary
+
+app = FastAPI(title="Guntur Heritage Atlas API", version="0.3.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -11,34 +18,50 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Public API foundation. Authentication will protect research/editing endpoints later.
+
+@app.on_event("startup")
+def create_tables() -> None:
+    Base.metadata.create_all(bind=engine)
+
 
 @app.get("/api/health")
-def health():
-    return {"status": "ok", "service": "guntur-heritage-atlas", "version": "0.2.0"}
-
-@app.get("/api/temples")
-def list_temples():
+def health() -> dict[str, str]:
     return {
-        "items": [
-            {
-                "id": "GHA-TEM-0001",
-                "name": "Agastyeshwara Sivalayam",
-                "city": "Guntur",
-                "status": "research-record",
-            }
-        ],
-        "count": 1,
+        "status": "ok",
+        "service": "guntur-heritage-atlas",
+        "version": "0.3.0",
     }
 
-@app.get("/api/temples/{temple_id}")
-def get_temple(temple_id: str):
-    if temple_id == "GHA-TEM-0001":
-        return {
-            "id": "GHA-TEM-0001",
-            "name": "Agastyeshwara Sivalayam",
-            "city": "Guntur",
-            "status": "research-record",
-            "evidence": "Initial research record; historical claims require source-level verification.",
-        }
-    return {"error": "Temple not found"}
+
+@app.get("/api/temples", response_model=list[TempleSummary])
+def list_temples(db: Session = Depends(get_db)) -> list[TempleSummary]:
+    temples = db.scalars(select(Temple).order_by(Temple.name)).all()
+    return [
+        TempleSummary(
+            id=temple.temple_id,
+            name=temple.name,
+            city="Guntur",
+            status="research-record",
+        )
+        for temple in temples
+    ]
+
+
+@app.get("/api/temples/{temple_id}", response_model=TempleDetail)
+def get_temple(temple_id: str, db: Session = Depends(get_db)) -> TempleDetail:
+    temple = db.scalar(select(Temple).where(Temple.temple_id == temple_id))
+    if temple is None:
+        raise HTTPException(status_code=404, detail="Temple not found")
+
+    return TempleDetail(
+        id=temple.temple_id,
+        name=temple.name,
+        city="Guntur",
+        status="research-record",
+        deity=temple.deity,
+        locality=temple.locality,
+        latitude=temple.latitude,
+        longitude=temple.longitude,
+        description=temple.description,
+        evidence="Initial research record; historical claims require source-level verification.",
+    )

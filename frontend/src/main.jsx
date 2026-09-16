@@ -20,6 +20,14 @@ const fallbackLocalities = [
   { id: "GHA-LOC-0005", name: "Undavalli", type: "village", district: "Guntur", status: "partial-verification" },
 ];
 
+const fallbackHistorical = {
+  record_id: "GHA-HIST-1961-GUNTUR-TALUK-INDEX",
+  title: "Guntur Taluk — Census 1961 fairs and festivals temple index",
+  scope: "Historical Guntur Taluk",
+  note: "This index preserves the village/deity/festival entries from the source map index. It is a historical administrative snapshot and is not a statement of current district boundaries.",
+  entries: [],
+};
+
 async function getJson(path, fallback) {
   try {
     const response = await fetch(`${API}${path}`);
@@ -34,6 +42,8 @@ function App() {
   const [temples, setTemples] = useState(fallbackTemples);
   const [localities, setLocalities] = useState(fallbackLocalities);
   const [routes, setRoutes] = useState([]);
+  const [historical, setHistorical] = useState(fallbackHistorical);
+  const [narratives, setNarratives] = useState([]);
   const [selected, setSelected] = useState(null);
   const [query, setQuery] = useState("");
   const [tab, setTab] = useState("temples");
@@ -42,6 +52,12 @@ function App() {
     getJson("/temples", fallbackTemples).then(setTemples);
     getJson("/localities", fallbackLocalities).then(setLocalities);
     getJson("/routes", []).then(setRoutes);
+    getJson("/historical-observations", []).then((records) => {
+      const index = records.find((record) => record.record_id === "GHA-HIST-1961-GUNTUR-TALUK-INDEX");
+      const narrativeRecord = records.find((record) => record.record_id === "GHA-HIST-1961-GUNTUR-TALUK-NARRATIVES");
+      if (index) setHistorical(index);
+      if (narrativeRecord) setNarratives(narrativeRecord.observations || []);
+    });
   }, []);
 
   const filteredTemples = useMemo(() => {
@@ -49,6 +65,13 @@ function App() {
     if (!q) return temples;
     return temples.filter((item) => `${item.name} ${item.city} ${item.status}`.toLowerCase().includes(q));
   }, [temples, query]);
+
+  const filteredHistorical = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const entries = historical.entries || [];
+    if (!q) return entries;
+    return entries.filter((item) => `${item.serial} ${item.locality} ${item.deity} ${item.festival_period}`.toLowerCase().includes(q));
+  }, [historical, query]);
 
   const filteredLocalities = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -65,6 +88,17 @@ function App() {
     const locality = await getJson(`/localities/${id}`, localities.find((item) => item.id === id));
     setSelected({ type: "locality", data: locality });
   }
+
+  function openHistorical(entry) {
+    const narrative = narratives.find((item) => {
+      const a = item.locality.toLowerCase();
+      const b = entry.locality.toLowerCase();
+      return a === b || a.includes(b) || b.includes(a);
+    });
+    setSelected({ type: "historical", data: { ...entry, narrative } });
+  }
+
+  const activeRecords = tab === "temples" ? filteredTemples : tab === "historical" ? filteredHistorical : filteredLocalities;
 
   return (
     <div className="site-shell">
@@ -93,9 +127,9 @@ function App() {
 
         <section className="stats-row">
           <div><strong>{temples.length}</strong><span>Temple records</span></div>
+          <div><strong>{historical.entries?.length || 0}</strong><span>Historical 1961</span></div>
           <div><strong>{localities.length}</strong><span>Localities mapped</span></div>
-          <div><strong>{routes.length || 1}</strong><span>Research route</span></div>
-          <div><strong>100%</strong><span>Source-aware design</span></div>
+          <div><strong>{routes.length || 1}</strong><span>Research routes</span></div>
         </section>
 
         <section className="workspace">
@@ -103,20 +137,36 @@ function App() {
             <div><p className="eyebrow">Explore the atlas</p><h2>Heritage around Guntur</h2></div>
             <div className="tabs">
               <button className={tab === "temples" ? "active" : ""} onClick={() => setTab("temples")}>Temples</button>
+              <button className={tab === "historical" ? "active" : ""} onClick={() => setTab("historical")}>Historical 1961 <span>{historical.entries?.length || 0}</span></button>
               <button className={tab === "localities" ? "active" : ""} onClick={() => setTab("localities")}>Localities</button>
             </div>
           </div>
 
+          {tab === "historical" && (
+            <div className="historical-notice">
+              <strong>Historical Guntur Taluk — Census 1961</strong>
+              <span>{historical.note}</span>
+            </div>
+          )}
+
           <div className="content-grid">
             <div className="record-list">
-              {(tab === "temples" ? filteredTemples : filteredLocalities).map((item, index) => (
-                <button className="record-card" key={item.id} onClick={() => tab === "temples" ? openTemple(item.id) : openLocality(item.id)}>
-                  <span className="record-number">0{index + 1}</span>
-                  <span className="record-main"><strong>{item.name}</strong><small>{tab === "temples" ? item.city : `${item.type || "place"} · ${item.district || "Guntur"}`}</small></span>
-                  <span className="arrow">↗</span>
-                </button>
-              ))}
-              {!(tab === "temples" ? filteredTemples : filteredLocalities).length && <div className="empty">No records match your search.</div>}
+              {activeRecords.map((item, index) => {
+                const isHistorical = tab === "historical";
+                return (
+                  <button className={`record-card ${isHistorical ? "historical-card" : ""}`} key={isHistorical ? item.serial : item.id} onClick={() => isHistorical ? openHistorical(item) : tab === "temples" ? openTemple(item.id) : openLocality(item.id)}>
+                    <span className="record-number">{isHistorical ? String(item.serial).padStart(2, "0") : String(index + 1).padStart(2, "0")}</span>
+                    <span className="record-main">
+                      <strong>{isHistorical ? item.locality : item.name}</strong>
+                      <small>{isHistorical ? item.deity : tab === "temples" ? item.city : `${item.type || "place"} · ${item.district || "Guntur"}`}</small>
+                      {isHistorical && <em>{item.festival_period}</em>}
+                    </span>
+                    {isHistorical && <span className="historical-badge">1961</span>}
+                    <span className="arrow">↗</span>
+                  </button>
+                );
+              })}
+              {!activeRecords.length && <div className="empty">No records match your search.</div>}
             </div>
 
             <div className="map-card">
@@ -124,7 +174,7 @@ function App() {
               <div className="map-label"><span className="map-pin" /> GUNTUR REGION</div>
               <div className="route-line" />
               {[[35, 28], [51, 46], [69, 34], [57, 70], [79, 60]].map(([left, top], i) => <button key={i} className="map-pin-dot" style={{ left: `${left}%`, top: `${top}%` }} onClick={() => setTab("temples")} aria-label={`heritage point ${i + 1}`}>{i + 1}</button>)}
-              <div className="map-caption"><strong>Research route 01</strong><span>Guntur → Pedakakani → Mangalagiri → Undavalli → Ponnur</span></div>
+              <div className="map-caption"><strong>{tab === "historical" ? "1961 historical index" : "Research route 01"}</strong><span>{tab === "historical" ? `${historical.entries?.length || 0} documented entries in the historical Guntur Taluk index` : "Guntur → Pedakakani → Mangalagiri → Undavalli → Ponnur"}</span></div>
             </div>
           </div>
         </section>
@@ -137,7 +187,35 @@ function App() {
 
       <footer><span>Guntur Heritage Atlas</span><span>Evidence before claims · Research edition</span></footer>
 
-      {selected && <div className="overlay" onClick={() => setSelected(null)}><aside className="detail-panel" onClick={(e) => e.stopPropagation()}><button className="close" onClick={() => setSelected(null)}>×</button><p className="eyebrow">{selected.type}</p><h2>{selected.data.name}</h2>{selected.type === "temple" ? <><div className="tag">{selected.data.status}</div><p>{selected.data.description || "A research record in the Guntur Heritage Atlas."}</p><h3>Evidence</h3><p className="muted">This record is currently marked <strong>{selected.data.evidence}</strong>. Historical claims are kept separate from tradition until verified.</p><h3>Sources</h3><ul>{(selected.data.sources || []).map((s) => <li key={s.id}>{s.title}{s.publisher ? ` — ${s.publisher}` : ""}</li>)}</ul></> : <><div className="tag">{selected.data.status}</div><p>{selected.data.history || "Locality research is being assembled."}</p><h3>Why the name?</h3><p>{selected.data.name_origin || "Name-origin research has not yet been verified."}</p><h3>Connected temples</h3><ul>{(selected.data.temples || []).map((t) => <li key={t.id}>{t.name}</li>)}</ul></>}</aside></div>}
+      {selected && (
+        <div className="overlay" onClick={() => setSelected(null)}>
+          <aside className="detail-panel" onClick={(e) => e.stopPropagation()}>
+            <button className="close" onClick={() => setSelected(null)}>×</button>
+            <p className="eyebrow">{selected.type === "historical" ? "Historical source record" : selected.type}</p>
+            <h2>{selected.type === "historical" ? selected.data.locality : selected.data.name}</h2>
+
+            {selected.type === "historical" ? (
+              <>
+                <div className="tag">Census 1961 · Historical Guntur Taluk</div>
+                <p><strong>{selected.data.deity}</strong></p>
+                <p>Festival period recorded in the index: <strong>{selected.data.festival_period}</strong>.</p>
+                <h3>Historical context</h3>
+                {selected.data.narrative ? (
+                  <ul>{selected.data.narrative.notes.map((note) => <li key={note}>{note}</li>)}</ul>
+                ) : (
+                  <p className="muted">The 1961 index records this locality, deity and festival period. A separate narrative note has not yet been added for this locality.</p>
+                )}
+                <h3>Source boundary</h3>
+                <p className="muted">This is a historical administrative snapshot. Its appearance here does not automatically mean the same temple entry is a current verified record or that historical Guntur Taluk has the same boundaries as today's district.</p>
+              </>
+            ) : selected.type === "temple" ? (
+              <><div className="tag">{selected.data.status}</div><p>{selected.data.description || "A research record in the Guntur Heritage Atlas."}</p><h3>Evidence</h3><p className="muted">This record is currently marked <strong>{selected.data.evidence}</strong>. Historical claims are kept separate from tradition until verified.</p><h3>Sources</h3><ul>{(selected.data.sources || []).map((s) => <li key={s.id}>{s.title}{s.publisher ? ` — ${s.publisher}` : ""}</li>)}</ul></>
+            ) : (
+              <><div className="tag">{selected.data.status}</div><p>{selected.data.history || "Locality research is being assembled."}</p><h3>Why the name?</h3><p>{selected.data.name_origin || "Name-origin research has not yet been verified."}</p><h3>Connected temples</h3><ul>{(selected.data.temples || []).map((t) => <li key={t.id}>{t.name}</li>)}</ul></>
+            )}
+          </aside>
+        </div>
+      )}
     </div>
   );
 }

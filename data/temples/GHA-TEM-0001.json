@@ -1,0 +1,30 @@
+{
+  "temple_id": "GHA-TEM-0001",
+  "name": "",
+  "alternate_names": [],
+  "deity": "",
+  "locality_id": null,
+  "location": {
+    "latitude": null,
+    "longitude": null,
+    "address": ""
+  },
+  "history": {
+    "summary": "",
+    "founding_period": null,
+    "founder": null,
+    "renovations": []
+  },
+  "name_origin": {
+    "summary": "",
+    "evidence": []
+  },
+  "architecture": {
+    "style": null,
+    "features": []
+  },
+  "festivals": [],
+  "sources": [],
+  "media": [],
+  "status": "research"
+}

@@ -1,0 +1,25 @@
+{
+  "locality_id": "GHA-LOC-0003",
+  "name": "Ponnur",
+  "type": "town",
+  "administrative_context": {
+    "current_district": "Guntur",
+    "state": "Andhra Pradesh",
+    "country": "India"
+  },
+  "historical_names": [],
+  "name_origin": {
+    "summary": null,
+    "status": "needs-review",
+    "claims": []
+  },
+  "history": {
+    "summary": "The Guntur District religious tourism page identifies Ponnur as a pilgrimage centre known for the Bhavanarayana Swamy temple and other notable temples.",
+    "status": "documented-government-source",
+    "source_ids": ["SRC-GUN-RELIGIOUS-TOURISM-01"]
+  },
+  "heritage_sites": ["GHA-TEM-0003"],
+  "sources": ["SRC-GUN-RELIGIOUS-TOURISM-01"],
+  "status": "partial-verification",
+  "verification_notes": "Temple identity is documented by the district tourism portal. Name origin and deeper historical chronology require additional epigraphic, archaeological, archival or academic sources."
+}

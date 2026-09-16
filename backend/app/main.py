@@ -22,8 +22,9 @@ from .schemas import (
 
 ROOT = Path(__file__).resolve().parents[2]
 ROUTE_DIR = ROOT / "data" / "routes"
+HISTORICAL_DIR = ROOT / "data" / "historical-observations"
 
-app = FastAPI(title="Guntur Heritage Atlas API", version="0.6.0")
+app = FastAPI(title="Guntur Heritage Atlas API", version="0.7.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
@@ -35,10 +36,8 @@ app.add_middleware(
 
 @app.on_event("startup")
 def create_tables_and_seed() -> None:
-    """Create the local schema and seed repository research records."""
     Base.metadata.create_all(bind=engine)
     from .seed import seed
-
     seed()
 
 
@@ -52,18 +51,18 @@ def source_summary(source: Source) -> SourceSummary:
     )
 
 
-def read_route(path: Path) -> dict[str, Any]:
+def read_json(path: Path, missing_detail: str) -> dict[str, Any]:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except FileNotFoundError:
-        raise HTTPException(status_code=404, detail="Route not found")
+        raise HTTPException(status_code=404, detail=missing_detail)
     except json.JSONDecodeError:
-        raise HTTPException(status_code=500, detail=f"Invalid route data: {path.name}")
+        raise HTTPException(status_code=500, detail=f"Invalid JSON data: {path.name}")
 
 
 @app.get("/api/health")
 def health() -> dict[str, str]:
-    return {"status": "ok", "service": "guntur-heritage-atlas", "version": "0.6.0"}
+    return {"status": "ok", "service": "guntur-heritage-atlas", "version": "0.7.0"}
 
 
 @app.get("/api/stats")
@@ -73,6 +72,7 @@ def stats(db: Session = Depends(get_db)) -> dict[str, int]:
         "localities": len(db.scalars(select(Locality)).all()),
         "sources": len(db.scalars(select(Source)).all()),
         "routes": len(list(ROUTE_DIR.glob("*.json"))),
+        "historical_observations": len(list(HISTORICAL_DIR.glob("*.json"))),
     }
 
 
@@ -167,5 +167,20 @@ def list_routes() -> list[dict[str, Any]]:
 
 @app.get("/api/routes/{route_id}")
 def get_route(route_id: str) -> dict[str, Any]:
-    path = ROUTE_DIR / f"{route_id}.json"
-    return read_route(path)
+    return read_json(ROUTE_DIR / f"{route_id}.json", "Route not found")
+
+
+@app.get("/api/historical-observations")
+def list_historical_observations() -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+    for path in sorted(HISTORICAL_DIR.glob("*.json")):
+        try:
+            records.append(json.loads(path.read_text(encoding="utf-8")))
+        except (OSError, json.JSONDecodeError):
+            continue
+    return records
+
+
+@app.get("/api/historical-observations/{record_id}")
+def get_historical_observation(record_id: str) -> dict[str, Any]:
+    return read_json(HISTORICAL_DIR / f"{record_id}.json", "Historical observation not found")

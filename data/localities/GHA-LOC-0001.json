@@ -1,0 +1,44 @@
+{
+  "locality_id": "GHA-LOC-0001",
+  "name": "Guntur",
+  "type": "city",
+  "administrative_context": {
+    "current_district": "Guntur",
+    "state": "Andhra Pradesh",
+    "country": "India"
+  },
+  "historical_names": [],
+  "name_origin": {
+    "summary": "The official district profile records multiple explanations for the name Guntur, including possible links to Telugu words such as gundu, gunta and kunta, and notes historical inscriptional references to variants of the name.",
+    "status": "partial-verification",
+    "claims": [
+      {
+        "claim": "The district profile associates the name with possible Telugu word origins including gundu, gunta and kunta.",
+        "status": "documented-government-source",
+        "source_id": "SRC-GUN-DISTRICT-PROFILE-01"
+      },
+      {
+        "claim": "The district profile records early inscriptional references to variants of Guntur, including references dated 922-929 CE and later inscriptions.",
+        "status": "documented-government-source",
+        "source_id": "SRC-GUN-DISTRICT-PROFILE-01"
+      }
+    ]
+  },
+  "history": {
+    "summary": "Guntur has a documented history spanning ancient, medieval and colonial periods. The official district history lists Satavahanas, Andhra Ikshvakus, Pallavas, Ananda Gotrikas, Vishnukundinas, Kota Vamsa, Chalukyas, Cholas, Kakatiyas, Vijayanagara and Qutb Shahi rule, followed by Mughal and British periods.",
+    "status": "documented-government-source",
+    "source_ids": [
+      "SRC-GUN-DISTRICT-HISTORY-01",
+      "SRC-GUN-DISTRICT-PROFILE-01"
+    ]
+  },
+  "heritage_sites": [
+    "GHA-TEM-0001"
+  ],
+  "sources": [
+    "SRC-GUN-DISTRICT-HISTORY-01",
+    "SRC-GUN-DISTRICT-PROFILE-01"
+  ],
+  "status": "partial-verification",
+  "verification_notes": "This is a research record, not a final historical conclusion. Competing name-origin explanations should remain separate until stronger primary or scholarly evidence is collected."
+}

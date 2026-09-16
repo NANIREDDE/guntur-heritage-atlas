@@ -1,0 +1,31 @@
+{
+  "locality_id": "GHA-LOC-0004",
+  "name": "Pedakakani",
+  "type": "village",
+  "administrative_context": {
+    "current_district": "Guntur",
+    "state": "Andhra Pradesh",
+    "country": "India"
+  },
+  "historical_names": ["Kakani", "Kotikakandipuram", "Kakanyapuram"],
+  "name_origin": {
+    "summary": "The 1961 Census of India fairs and festivals volume records older forms including Kakani, Kotikakandipuram and Kakanyapuram and presents an explanation for the later form Kakani.",
+    "status": "historical-source-with-traditional-explanation",
+    "claims": [
+      {
+        "claim": "The 1961 census volume records older forms of the locality name and discusses a traditional explanation for the later name.",
+        "status": "documented-historical-source",
+        "source_id": "SRC-GUN-CENSUS-1961-PEDAKAKANI-01"
+      }
+    ]
+  },
+  "history": {
+    "summary": "The 1961 census volume describes Pedakakani as an ancient and historical village and records several temples and inscriptions associated with the locality.",
+    "status": "documented-historical-source",
+    "source_ids": ["SRC-GUN-CENSUS-1961-PEDAKAKANI-01", "SRC-GUN-TOURISM-01"]
+  },
+  "heritage_sites": ["GHA-TEM-0004"],
+  "sources": ["SRC-GUN-CENSUS-1961-PEDAKAKANI-01", "SRC-GUN-TOURISM-01"],
+  "status": "partial-verification",
+  "verification_notes": "The historical name discussion contains a traditional etymology and should be separated from independently verified inscriptional evidence."
+}

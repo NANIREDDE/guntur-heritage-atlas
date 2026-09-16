@@ -1,0 +1,13 @@
+:root { font-family: system-ui, sans-serif; color: #1f2937; background: #f7f5f0; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.app { max-width: 1100px; margin: 0 auto; padding: 64px 24px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 700; }
+h1 { max-width: 760px; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; margin: 12px 0 20px; }
+.intro { max-width: 680px; font-size: 1.2rem; line-height: 1.6; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 48px 0; }
+.cards article, .map-placeholder { background: white; border: 1px solid #ddd8ce; border-radius: 16px; padding: 24px; }
+.cards strong, .cards span { display: block; }
+.cards span { margin-top: 8px; color: #6b7280; }
+.map-placeholder { min-height: 280px; display: grid; align-content: center; text-align: center; }
+@media (max-width: 700px) { .cards { grid-template-columns: 1fr; } }

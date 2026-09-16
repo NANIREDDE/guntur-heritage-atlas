@@ -1,0 +1,40 @@
+{
+  "temple_id": "GHA-TEM-0003",
+  "name": "Bhavanarayana Swamy Temple",
+  "alternate_names": [],
+  "deity": "Vishnu",
+  "locality_id": "GHA-LOC-0003",
+  "location": {
+    "latitude": null,
+    "longitude": null,
+    "address": "Ponnur, Guntur District, Andhra Pradesh, India"
+  },
+  "history": {
+    "summary": "The Guntur District tourism page identifies the Bhavanarayana Swamy temple as a prominent place of worship in Ponnur.",
+    "founding_period": null,
+    "founder": null,
+    "renovations": []
+  },
+  "name_origin": {
+    "summary": null,
+    "evidence": []
+  },
+  "architecture": {
+    "style": null,
+    "features": []
+  },
+  "festivals": [],
+  "sources": [
+    {
+      "source_id": "SRC-GUN-TOURISM-01",
+      "title": "Tourism | Guntur District",
+      "publisher": "Government of Andhra Pradesh, Guntur District",
+      "url": "https://guntur.ap.gov.in/tourism/",
+      "accessed": "2026-09-16",
+      "supports": "Identifies Ponnur and its Bhavanarayana Swamy temple as a prominent pilgrimage site."
+    }
+  ],
+  "media": [],
+  "status": "partial-verification",
+  "verification_notes": "Coordinates, inscriptions, construction chronology, architecture and temple-institution records still require verification."
+}

@@ -1,0 +1,45 @@
+{
+  "temple_id": "GHA-TEM-0002",
+  "name": "Panakala Lakshmi Narasimha Swamy Temple",
+  "alternate_names": ["Panakala Swamy Temple", "Panakala Narasimha Swamy Temple"],
+  "deity": "Narasimha",
+  "locality_id": "GHA-LOC-0002",
+  "location": {
+    "latitude": null,
+    "longitude": null,
+    "address": "Mangalagiri, Andhra Pradesh"
+  },
+  "history": {
+    "summary": "The Guntur District tourism portal identifies Mangalagiri as a long-established pilgrimage centre and describes the Panakala Lakshmi Narasimha Swamy temple on Mangalagiri hill.",
+    "founding_period": null,
+    "founder": null,
+    "renovations": []
+  },
+  "name_origin": {
+    "summary": "The district tourism material records Mangalagiri as meaning 'Auspicious Hill' and describes the deity as Panakala Narasimha Swamy because of the temple's traditional offering of jaggery water.",
+    "evidence": [
+      {
+        "source_id": "SRC-GUN-TOURISM-01",
+        "status": "documented-government-source"
+      }
+    ]
+  },
+  "architecture": {
+    "style": null,
+    "features": []
+  },
+  "festivals": [],
+  "sources": [
+    {
+      "source_id": "SRC-GUN-TOURISM-01",
+      "title": "Tourism | Guntur District",
+      "publisher": "Government of Andhra Pradesh, Guntur District",
+      "url": "https://guntur.ap.gov.in/tourism/",
+      "accessed": "2026-09-16",
+      "supports": "Identifies Mangalagiri as a pilgrimage centre and describes Panakala Lakshmi Narasimha Swamy Temple."
+    }
+  ],
+  "media": [],
+  "status": "partial-verification",
+  "verification_notes": "Coordinates, inscriptional evidence, construction chronology and architectural details still require source-level verification."
+}

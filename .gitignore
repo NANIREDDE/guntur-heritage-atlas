@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+*.swp
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Local data / databases
+*.sqlite3
+*.db

@@ -1,0 +1,25 @@
+{
+  "locality_id": "GHA-LOC-0005",
+  "name": "Undavalli",
+  "type": "village",
+  "administrative_context": {
+    "current_district": "Guntur",
+    "state": "Andhra Pradesh",
+    "country": "India"
+  },
+  "historical_names": [],
+  "name_origin": {
+    "summary": null,
+    "status": "needs-review",
+    "claims": []
+  },
+  "history": {
+    "summary": "Undavalli is documented in government and archaeological sources as a heritage location associated with the rock-cut Hindu temple/cave complex and the Anantha Padmanabha Swami temple.",
+    "status": "documented-government-and-archaeological-source",
+    "source_ids": ["SRC-GUN-ASI-UNDAVALLI-01", "SRC-GUN-TOURISM-01"]
+  },
+  "heritage_sites": ["GHA-TEM-0005"],
+  "sources": ["SRC-GUN-ASI-UNDAVALLI-01", "SRC-GUN-TOURISM-01"],
+  "status": "partial-verification",
+  "verification_notes": "The protected monument designation is directly supported by ASI. Temple-specific historical claims require separate source-level verification."
+}

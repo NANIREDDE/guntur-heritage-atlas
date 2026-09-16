@@ -1,0 +1,45 @@
+{
+  "temple_id": "GHA-TEM-0001",
+  "name": "Agastyeshwara Sivalayam",
+  "alternate_names": ["Agasthyeswara Sivalayam"],
+  "deity": "Shiva",
+  "locality_id": null,
+  "location": {
+    "latitude": null,
+    "longitude": null,
+    "address": "Old city of Guntur, Andhra Pradesh"
+  },
+  "history": {
+    "summary": "Agastyeshwara Sivalayam is described by heritage-oriented sources as an ancient Shiva temple in Guntur city.",
+    "founding_period": null,
+    "founder": null,
+    "renovations": []
+  },
+  "name_origin": {
+    "summary": "A local tradition associates the temple with Sage Agastya and a swayambhu linga.",
+    "evidence": [
+      {
+        "source_id": "SRC-GUN-AGASTYESHWARA-01",
+        "status": "traditional-claim"
+      }
+    ]
+  },
+  "architecture": {
+    "style": null,
+    "features": []
+  },
+  "festivals": [],
+  "sources": [
+    {
+      "source_id": "SRC-GUN-AGASTYESHWARA-01",
+      "title": "Places to visit in Guntur India",
+      "publisher": "Incredible India / Ministry of Tourism",
+      "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/guntur",
+      "accessed": "2026-09-16",
+      "supports": "Identifies Agastyeshwara temple as an ancient temple in Guntur and describes its traditional historical context."
+    }
+  ],
+  "media": [],
+  "status": "partial-verification",
+  "verification_notes": "Traditional dates and legends are not treated as established historical facts. Coordinates, current management, inscriptions, architecture and additional primary sources still require verification."
+}

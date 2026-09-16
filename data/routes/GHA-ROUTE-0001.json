@@ -1,0 +1,18 @@
+{
+  "route_id": "GHA-ROUTE-0001",
+  "name": "Guntur Heritage Temple Trail — Research Route 01",
+  "type": "heritage-temple-trail",
+  "description": "A first research route connecting documented heritage records around Guntur. This is a planning route, not a claim about the historically original travel sequence.",
+  "stops": [
+    {"order": 1, "entity_type": "temple", "entity_id": "GHA-TEM-0001", "name": "Agastyeshwara Sivalayam", "locality_id": "GHA-LOC-0001"},
+    {"order": 2, "entity_type": "temple", "entity_id": "GHA-TEM-0004", "name": "Sri Bhramaramba Malleswara Swamy Temple", "locality_id": "GHA-LOC-0004"},
+    {"order": 3, "entity_type": "temple", "entity_id": "GHA-TEM-0002", "name": "Panakala Lakshmi Narasimha Swamy Temple", "locality_id": "GHA-LOC-0002"},
+    {"order": 4, "entity_type": "temple", "entity_id": "GHA-TEM-0005", "name": "Anantha Padmanabha Swami Temple, Undavalli", "locality_id": "GHA-LOC-0005"},
+    {"order": 5, "entity_type": "temple", "entity_id": "GHA-TEM-0003", "name": "Bhavanarayana Swamy Temple", "locality_id": "GHA-LOC-0003"}
+  ],
+  "evidence_status": "research-route",
+  "notes": [
+    "The route is a product feature connecting records; it does not assert that the sites form an ancient historical route.",
+    "Coordinates will be added only after verification."
+  ]
+}

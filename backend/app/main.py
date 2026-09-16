@@ -11,13 +11,19 @@ from sqlalchemy.orm import Session
 
 from .database import engine
 from .dependencies import get_db
-from .models import Base, Locality, Temple
-from .schemas import LocalityDetail, LocalitySummary, SourceSummary, TempleDetail, TempleSummary
+from .models import Base, Locality, Source, Temple
+from .schemas import (
+    LocalityDetail,
+    LocalitySummary,
+    SourceSummary,
+    TempleDetail,
+    TempleSummary,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 ROUTE_DIR = ROOT / "data" / "routes"
 
-app = FastAPI(title="Guntur Heritage Atlas API", version="0.5.0")
+app = FastAPI(title="Guntur Heritage Atlas API", version="0.6.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
@@ -29,16 +35,14 @@ app.add_middleware(
 
 @app.on_event("startup")
 def create_tables_and_seed() -> None:
+    """Create the local schema and seed repository research records."""
     Base.metadata.create_all(bind=engine)
-    try:
-        from .seed import seed
-        seed()
-    except Exception:
-        # The API should still start if a future research record needs manual repair.
-        pass
+    from .seed import seed
+
+    seed()
 
 
-def source_summary(source) -> SourceSummary:
+def source_summary(source: Source) -> SourceSummary:
     return SourceSummary(
         id=source.source_id,
         title=source.title,
@@ -48,9 +52,18 @@ def source_summary(source) -> SourceSummary:
     )
 
 
+def read_route(path: Path) -> dict[str, Any]:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Route not found")
+    except json.JSONDecodeError:
+        raise HTTPException(status_code=500, detail=f"Invalid route data: {path.name}")
+
+
 @app.get("/api/health")
 def health() -> dict[str, str]:
-    return {"status": "ok", "service": "guntur-heritage-atlas", "version": "0.5.0"}
+    return {"status": "ok", "service": "guntur-heritage-atlas", "version": "0.6.0"}
 
 
 @app.get("/api/stats")
@@ -58,13 +71,9 @@ def stats(db: Session = Depends(get_db)) -> dict[str, int]:
     return {
         "temples": len(db.scalars(select(Temple)).all()),
         "localities": len(db.scalars(select(Locality)).all()),
-        "sources": len(db.execute(select(Temple)).all()) if False else len(_source_files()),
+        "sources": len(db.scalars(select(Source)).all()),
         "routes": len(list(ROUTE_DIR.glob("*.json"))),
     }
-
-
-def _source_files() -> list[Path]:
-    return sorted((ROOT / "data" / "sources").glob("*.json"))
 
 
 @app.get("/api/temples", response_model=list[TempleSummary])
@@ -147,10 +156,16 @@ def get_locality(locality_id: str, db: Session = Depends(get_db)) -> LocalityDet
 
 @app.get("/api/routes")
 def list_routes() -> list[dict[str, Any]]:
-    records = []
+    records: list[dict[str, Any]] = []
     for path in sorted(ROUTE_DIR.glob("*.json")):
         try:
             records.append(json.loads(path.read_text(encoding="utf-8")))
         except (OSError, json.JSONDecodeError):
             continue
     return records
+
+
+@app.get("/api/routes/{route_id}")
+def get_route(route_id: str) -> dict[str, Any]:
+    path = ROUTE_DIR / f"{route_id}.json"
+    return read_route(path)

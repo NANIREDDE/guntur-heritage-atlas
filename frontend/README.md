@@ -1,6 +1,6 @@
 # Frontend
 
-React + Vite web application for exploring the Guntur Heritage Atlas.
+React + Vite interface for the Guntur Heritage Atlas.
 
 ## Run locally
 
@@ -10,4 +10,4 @@ npm install
 npm run dev
 ```
 
-The development server defaults to port 5173.
+The Vite development server runs on `http://localhost:5173` and proxies `/api` requests to the FastAPI backend on `http://localhost:8000`.

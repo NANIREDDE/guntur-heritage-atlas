@@ -8,10 +8,10 @@
     "latitude": 16.3008,
     "longitude": 80.4428,
     "address": "Sivalayam Rd, Christian Pet, Old Guntur, Guntur, Andhra Pradesh 522001, India",
-    "precision": "address verified against current public map/business listing; coordinates remain map-reference data, not doorway survey coordinates"
+    "precision": "street address independently matched in current public map/business listings; coordinates remain map-reference data, not a doorway survey"
   },
   "history": {
-    "summary": "Agastyeshwara Sivalayam is described by heritage-oriented sources as an ancient Shiva temple in Guntur city.",
+    "summary": "Agastyeshwara Sivalayam is an ancient Shiva temple in Guntur city according to heritage-oriented tourism material.",
     "founding_period": null,
     "founder": null,
     "renovations": []
@@ -22,8 +22,8 @@
   },
   "architecture": {"style": null, "features": []},
   "festivals": [],
-  "sources": [{"source_id": "SRC-GUN-AGASTYESHWARA-01", "title": "Places to visit in Guntur India", "publisher": "Incredible India / Ministry of Tourism", "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/guntur", "accessed": "2026-09-16", "supports": "Identifies Agastyeshwara temple as an ancient temple in Guntur and describes its traditional historical context."}],
+  "sources": [{"source_id": "SRC-GUN-AGASTYESHWARA-01", "title": "Places to visit in Guntur India", "publisher": "Incredible India / Ministry of Tourism", "url": "https://www.incredibleindia.gov.in/en/andhra-pradesh/guntur", "accessed": "2026-09-17", "supports": "Identifies Agastyeshwara temple as an ancient temple in Guntur and describes its traditional historical context."}, {"source_id": "WEB-VERIFY-AGASTYESHWARA-2026-09", "title": "Sivalayam (Sri Agastheswara Swamy Temple) current address listing", "publisher": "Yappe.in", "url": "https://yappe.in/andhra-pradesh/guntur/sivalayam-sri-agastheswara-swamy-temple/1359080", "accessed": "2026-09-17", "supports": "Current public listing gives Sivalayam Road, Christian Pet, Old Guntur, Guntur, Andhra Pradesh 522001."}],
   "media": [{"url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Agasteeswara_temple.jpg", "caption": "Agasteeswara Temple entrance", "source_url": "https://en.wikipedia.org/wiki/Guntur", "credit": "Wikimedia Commons image used via Wikipedia; verify license before redistribution."}],
   "status": "partial-verification",
-  "verification_notes": "Current public map/business data identifies the temple at Sivalayam Road in Christian Pet, Old Guntur. Historical claims and the exact doorway coordinate remain separate verification tasks."
+  "verification_notes": "Address is supported by a current public listing and is consistent with the existing Guntur heritage record. The exact doorway coordinate and historical chronology remain separate verification tasks."
 }

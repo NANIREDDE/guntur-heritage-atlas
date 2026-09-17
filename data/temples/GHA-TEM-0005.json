@@ -5,9 +5,10 @@
   "deity": "Vishnu",
   "locality_id": "GHA-LOC-0005",
   "location": {
-    "latitude": null,
-    "longitude": null,
-    "address": "Undavalli, Guntur District, Andhra Pradesh, India"
+    "latitude": 16.49724,
+    "longitude": 80.58224,
+    "address": "Undavalli, Tadepalle, Guntur District, Andhra Pradesh, India",
+    "precision": "nearby-site reference; temple-specific coordinate should be field verified"
   },
   "history": {
     "summary": "The Guntur District portal identifies the Anantha Padmanabha Swami Temple at Undavalli, while the Archaeological Survey of India lists the four-storeyed rock-cut Hindu temple at Undavalli as a centrally protected monument/site.",
@@ -15,34 +16,14 @@
     "founder": null,
     "renovations": []
   },
-  "name_origin": {
-    "summary": null,
-    "evidence": []
-  },
-  "architecture": {
-    "style": "rock-cut heritage complex",
-    "features": ["four-storeyed rock-cut Hindu temple recorded by ASI"]
-  },
+  "name_origin": {"summary": null, "evidence": []},
+  "architecture": {"style": "rock-cut heritage complex", "features": ["four-storeyed rock-cut Hindu temple recorded by ASI"]},
   "festivals": [],
   "sources": [
-    {
-      "source_id": "SRC-GUN-ASI-UNDAVALLI-01",
-      "title": "Centrally Protected Monuments/Sites: Four-storeyed rock-cut Hindu temple, Undavalli",
-      "publisher": "Archaeological Survey of India",
-      "url": "https://asi.nic.in/pdf/CPM_List.pdf",
-      "accessed": "2026-09-16",
-      "supports": "Lists the four-storeyed rock-cut Hindu temple at Undavalli in Guntur district as a centrally protected monument/site."
-    },
-    {
-      "source_id": "SRC-GUN-TOURISM-01",
-      "title": "Tourism | Guntur District",
-      "publisher": "Government of Andhra Pradesh, Guntur District",
-      "url": "https://guntur.ap.gov.in/tourism/",
-      "accessed": "2026-09-16",
-      "supports": "Identifies the Undavalli caves near Mangalagiri as historically prominent."
-    }
+    {"source_id": "SRC-GUN-ASI-UNDAVALLI-01", "title": "Centrally Protected Monuments/Sites: Four-storeyed rock-cut Hindu temple, Undavalli", "publisher": "Archaeological Survey of India", "url": "https://asi.nic.in/pdf/CPM_List.pdf", "accessed": "2026-09-16", "supports": "Lists the four-storeyed rock-cut Hindu temple at Undavalli in Guntur district as a centrally protected monument/site."},
+    {"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-16", "supports": "Identifies the Undavalli caves near Mangalagiri as historically prominent."}
   ],
-  "media": [],
+  "media": [{"url": "https://cdn.s3waas.gov.in/s30777d5c17d4066b82ab86dff8a46af6f/uploads/2021/09/2024112657.png", "caption": "Anantha Padmanabha Swami Temple and Undavalli cave complex", "source_url": "https://guntur.ap.gov.in/slider/vundavalli-caves/", "credit": "Guntur District, Government of Andhra Pradesh; verify reuse terms before redistribution."}],
   "status": "partial-verification",
-  "verification_notes": "Temple-specific chronology and the relationship between the temple and protected rock-cut complex require separate architectural and archaeological verification."
+  "verification_notes": "The displayed coordinate is a nearby-site reference from a map listing; the exact temple doorway should be field verified. Temple-specific chronology and the relationship between the temple and protected rock-cut complex require separate architectural and archaeological verification."
 }

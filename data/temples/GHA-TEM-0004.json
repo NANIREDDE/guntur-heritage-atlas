@@ -5,9 +5,10 @@
   "deity": "Shiva",
   "locality_id": "GHA-LOC-0004",
   "location": {
-    "latitude": null,
-    "longitude": null,
-    "address": "Pedakakani, Guntur District, Andhra Pradesh, India"
+    "latitude": 16.3361,
+    "longitude": 80.4982,
+    "address": "Pedakakani, Guntur District, Andhra Pradesh, India",
+    "precision": "temple-level coordinate from a published coordinate listing; field verification still recommended"
   },
   "history": {
     "summary": "The 1961 Census of India volume records Sri Malleswaraswamy among the principal places of worship in Pedakakani. Guntur District tourism also identifies Pedakakani as a prominent temple area.",
@@ -15,34 +16,14 @@
     "founder": null,
     "renovations": []
   },
-  "name_origin": {
-    "summary": null,
-    "evidence": []
-  },
-  "architecture": {
-    "style": null,
-    "features": []
-  },
+  "name_origin": {"summary": null, "evidence": []},
+  "architecture": {"style": null, "features": []},
   "festivals": [],
   "sources": [
-    {
-      "source_id": "SRC-GUN-CENSUS-1961-PEDAKAKANI-01",
-      "title": "Fairs and Festivals, Guntur, 1961 Census of India",
-      "publisher": "Office of the Registrar General, Census of India",
-      "url": "https://censusindia.gov.in/nada/index.php/catalog/30147/download/33328/41956_1961_GUN.pdf",
-      "accessed": "2026-09-16",
-      "supports": "Records Sri Malleswaraswamy as one of the main places of worship in Pedakakani."
-    },
-    {
-      "source_id": "SRC-GUN-TOURISM-01",
-      "title": "Tourism | Guntur District",
-      "publisher": "Government of Andhra Pradesh, Guntur District",
-      "url": "https://guntur.ap.gov.in/tourism/",
-      "accessed": "2026-09-16",
-      "supports": "Identifies Pedakakani as one of the district's prominent temple areas."
-    }
+    {"source_id": "SRC-GUN-CENSUS-1961-PEDAKAKANI-01", "title": "Fairs and Festivals, Guntur, 1961 Census of India", "publisher": "Office of the Registrar General, Census of India", "url": "https://censusindia.gov.in/nada/index.php/catalog/30147/download/33328/41956_1961_GUN.pdf", "accessed": "2026-09-16", "supports": "Records Sri Malleswaraswamy as one of the main places of worship in Pedakakani."},
+    {"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-16", "supports": "Identifies Pedakakani as one of the district's prominent temple areas."}
   ],
-  "media": [],
+  "media": [{"url": "https://3.bp.blogspot.com/-aHiEpw9qlF4/XJcX2K20bpI/AAAAAAAACr4/jN0RTlI12xUynvbW11J4E0XR2iOl6N77gCLcBGAs/s1600/Sri%2BMalleshwara%2BSwamy%2BTemple%2Bin%2BPedakakani.JPG", "caption": "Pedakakani Sri Malleswara Swamy Temple gopuram", "source_url": "https://indiantempleslist.blogspot.com/2016/01/pedakakani-sri-bramarambha-malleswara-swamy-temple-guntur.html", "credit": "Indian Temples List; verify image license before redistribution."}],
   "status": "partial-verification",
   "verification_notes": "Chronology, inscriptions, architecture and current institutional records require additional verification."
 }

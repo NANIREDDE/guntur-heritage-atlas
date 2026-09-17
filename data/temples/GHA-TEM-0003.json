@@ -1,13 +1,14 @@
 {
   "temple_id": "GHA-TEM-0003",
   "name": "Bhavanarayana Swamy Temple",
-  "alternate_names": [],
+  "alternate_names": ["Sakshi Bhavanarayana Swamy Temple"],
   "deity": "Vishnu",
   "locality_id": "GHA-LOC-0003",
   "location": {
-    "latitude": null,
-    "longitude": null,
-    "address": "Ponnur, Guntur District, Andhra Pradesh, India"
+    "latitude": 16.07114,
+    "longitude": 80.54944,
+    "address": "Ponnur, Guntur District, Andhra Pradesh, India",
+    "precision": "town-level reference; temple-specific coordinates still need field verification"
   },
   "history": {
     "summary": "The Guntur District tourism page identifies the Bhavanarayana Swamy temple as a prominent place of worship in Ponnur.",
@@ -15,26 +16,11 @@
     "founder": null,
     "renovations": []
   },
-  "name_origin": {
-    "summary": null,
-    "evidence": []
-  },
-  "architecture": {
-    "style": null,
-    "features": []
-  },
+  "name_origin": {"summary": null, "evidence": []},
+  "architecture": {"style": null, "features": []},
   "festivals": [],
-  "sources": [
-    {
-      "source_id": "SRC-GUN-TOURISM-01",
-      "title": "Tourism | Guntur District",
-      "publisher": "Government of Andhra Pradesh, Guntur District",
-      "url": "https://guntur.ap.gov.in/tourism/",
-      "accessed": "2026-09-16",
-      "supports": "Identifies Ponnur and its Bhavanarayana Swamy temple as a prominent pilgrimage site."
-    }
-  ],
-  "media": [],
+  "sources": [{"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-16", "supports": "Identifies Ponnur and its Bhavanarayana Swamy temple as a prominent pilgrimage site."}],
+  "media": [{"url": "https://sp-ao.shortpixel.ai/client/to_webp%2Cq_glossy%2Cret_img%2Cw_768%2Ch_1024/https%3A/explorebyroad.blog/wp-content/uploads/2021/09/img_2231-768x1024.jpg", "caption": "Sakshi Bhavanarayana Swamy Temple gopuram", "source_url": "https://explorebyroad.blog/a-trip-to-ponnur-and-temples-you-should-visit/", "credit": "Explore By Road; verify image license before redistribution."}],
   "status": "partial-verification",
-  "verification_notes": "Coordinates, inscriptions, construction chronology, architecture and temple-institution records still require verification."
+  "verification_notes": "The displayed coordinate is a town-level reference, not a verified temple entrance coordinate. Coordinates, inscriptions, construction chronology, architecture and temple-institution records still require verification."
 }

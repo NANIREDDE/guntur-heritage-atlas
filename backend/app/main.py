@@ -19,7 +19,7 @@ ROUTE_DIR = ROOT / "data" / "routes"
 HISTORICAL_DIR = ROOT / "data" / "historical-observations"
 TEMPLE_DIR = ROOT / "data" / "temples"
 
-app = FastAPI(title="Guntur Heritage Atlas API", version="0.8.0")
+app = FastAPI(title="Guntur Heritage Atlas API", version="0.9.0")
 app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
 
@@ -43,18 +43,26 @@ def read_json(path: Path, missing_detail: str) -> dict[str, Any]:
         raise HTTPException(status_code=500, detail=f"Invalid JSON data: {path.name}")
 
 
-def temple_media(temple_id: str) -> list[MediaSummary]:
+def temple_record(temple_id: str) -> dict[str, Any]:
     path = TEMPLE_DIR / f"{temple_id}.json"
     try:
-        record = json.loads(path.read_text(encoding="utf-8"))
+        return json.loads(path.read_text(encoding="utf-8"))
     except (FileNotFoundError, OSError, json.JSONDecodeError):
-        return []
-    return [MediaSummary(**item) for item in record.get("media", []) if item.get("url")]
+        return {}
+
+
+def temple_media(temple_id: str) -> list[MediaSummary]:
+    return [MediaSummary(**item) for item in temple_record(temple_id).get("media", []) if item.get("url")]
+
+
+def temple_address(temple_id: str) -> str | None:
+    location = temple_record(temple_id).get("location", {})
+    return location.get("address")
 
 
 @app.get("/api/health")
 def health() -> dict[str, str]:
-    return {"status": "ok", "service": "guntur-heritage-atlas", "version": "0.8.0"}
+    return {"status": "ok", "service": "guntur-heritage-atlas", "version": "0.9.0"}
 
 
 @app.get("/api/stats")
@@ -80,7 +88,7 @@ def get_temple(temple_id: str, db: Session = Depends(get_db)) -> TempleDetail:
     temple = db.scalar(select(Temple).where(Temple.temple_id == temple_id))
     if temple is None:
         raise HTTPException(status_code=404, detail="Temple not found")
-    return TempleDetail(id=temple.temple_id, name=temple.name, city=temple.locality.name if temple.locality else "Guntur", status=temple.evidence_status, deity=temple.deity, locality=temple.locality.name if temple.locality else None, latitude=temple.latitude, longitude=temple.longitude, description=temple.description, evidence=temple.evidence_status, sources=[source_summary(source) for source in temple.sources], media=temple_media(temple.temple_id))
+    return TempleDetail(id=temple.temple_id, name=temple.name, city=temple.locality.name if temple.locality else "Guntur", status=temple.evidence_status, deity=temple.deity, locality=temple.locality.name if temple.locality else None, address=temple_address(temple.temple_id), latitude=temple.latitude, longitude=temple.longitude, description=temple.description, evidence=temple.evidence_status, sources=[source_summary(source) for source in temple.sources], media=temple_media(temple.temple_id))
 
 
 @app.get("/api/localities", response_model=list[LocalitySummary])

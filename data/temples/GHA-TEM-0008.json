@@ -1,0 +1,21 @@
+{
+  "temple_id": "GHA-TEM-0008",
+  "name": "Sri Trikoteswara Swamy Temple, Kotappakonda",
+  "alternate_names": ["Kotappakonda Trikoteswara Swamy Temple", "Kotappa Konda Temple"],
+  "deity": "Shiva",
+  "locality_id": null,
+  "location": {"latitude": 16.145347, "longitude": 80.035761, "address": "42WP+R39, Kotappakonda Rd, Narasaraopeta, Andhra Pradesh 522549, India", "precision": "site-level public map reference; address is a current public map/listing reference"},
+  "history": {"summary": "Government tourism sources identify Kotappakonda as a major pilgrimage centre with the Trikoteswara Swamy temple on the hill. The hill has three prominent peaks associated in the temple tradition with Brahma, Vishnu and Rudra, and the main temple is described on Brahma Shikharam. Current government tourism sources place Kotappakonda in present-day Palnadu district; older tourism material refers to it as part of Guntur District.", "founding_period": null, "founder": null, "renovations": []},
+  "name_origin": {"summary": "The name Trikoteswara is connected in the tourism description to the three-peaked hill (Trikuta/Trikoota) and the deity of the site.", "evidence": [{"source_id": "SRC-AP-TOURISM-KOTAPPAKONDA-01", "status": "documented-description"}]},
+  "architecture": {"style": null, "features": ["Hilltop temple on Kotappakonda/Trikuta hills", "Main shrine associated with Brahma Shikharam"]},
+  "festivals": ["Maha Shivaratri", "Kotappakonda Tirunallu"],
+  "sources": [
+    {"source_id": "SRC-AP-TOURISM-KOTAPPAKONDA-01", "title": "Sri Trikooteswara Swamy Temple — AP Temples Brochure", "publisher": "Andhra Pradesh Tourism", "url": "https://tourism.ap.gov.in/assets/img/Brochures/AP%20Temples%20Brochure.pdf", "accessed": "2026-09-17", "supports": "Identifies Sri Trikooteswara Swamy Temple at Kotappakonda, describes the three peaks and Trikooteswara name, and notes the site's historic Guntur District reference."},
+    {"source_id": "SRC-PALNADU-KOTAPPAKONDA-01", "title": "Tourism — Kotappa Konda", "publisher": "Government of Andhra Pradesh, Palnadu District", "url": "https://palnadu.ap.gov.in/tourism/", "accessed": "2026-09-17", "supports": "Current district tourism portal identifies Kotappa Konda near Narasaraopet and the presiding deity as Trikoteswara Swamy."},
+    {"source_id": "SRC-APSRTC-GUNTUR-PILGRIM-01", "title": "Pilgrim Services in Guntur Region", "publisher": "APSRTC", "url": "https://www.apsrtc.ap.gov.in/P_Guntur.php", "accessed": "2026-09-17", "supports": "Lists Sri Trikoteswara Swamy, Kotappakonda among pilgrim services in the Guntur region."},
+    {"source_id": "WEB-VERIFY-KOTAPPAKONDA-2026-09", "title": "Kotappakonda Sri Trikoteswara Swami Temple current map/listing address", "publisher": "Public map/business listing", "url": "https://www.google.com/maps/search/Kotappakonda+Sri+Trikoteswara+Swami+Temple", "accessed": "2026-09-17", "supports": "Current public map reference for the temple location; used only for address/location cross-checking."}
+  ],
+  "media": [],
+  "status": "partial-verification",
+  "verification_notes": "Temple identity and pilgrimage significance are strongly supported by Andhra Pradesh tourism/government sources. Current public map data supports the address reference. The atlas keeps coordinates internally but does not display them in the temple profile. Current administrative geography is Palnadu district; older sources may call the site Guntur District because of historical district boundaries. No founding date is asserted here."
+}

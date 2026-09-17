@@ -8,7 +8,7 @@
     "latitude": 16.49724,
     "longitude": 80.58224,
     "address": "Undavalli, Tadepalle, Andhra Pradesh 522501, India",
-    "precision": "site-level public map/business address; exact temple doorway versus cave-complex coordinate should be field verified"
+    "precision": "site-level public location; exact temple doorway versus cave-complex coordinate should be field verified"
   },
   "history": {
     "summary": "The Guntur District portal identifies the Anantha Padmanabha Swami Temple at Undavalli, while the Archaeological Survey of India lists the four-storeyed rock-cut Hindu temple at Undavalli as a centrally protected monument/site.",
@@ -20,10 +20,11 @@
   "architecture": {"style": "rock-cut heritage complex", "features": ["four-storeyed rock-cut Hindu temple recorded by ASI"]},
   "festivals": [],
   "sources": [
-    {"source_id": "SRC-GUN-ASI-UNDAVALLI-01", "title": "Centrally Protected Monuments/Sites: Four-storeyed rock-cut Hindu temple, Undavalli", "publisher": "Archaeological Survey of India", "url": "https://asi.nic.in/pdf/CPM_List.pdf", "accessed": "2026-09-16", "supports": "Lists the four-storeyed rock-cut Hindu temple at Undavalli in Guntur district as a centrally protected monument/site."},
-    {"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-16", "supports": "Identifies the Undavalli caves near Mangalagiri as historically prominent."}
+    {"source_id": "SRC-GUN-ASI-UNDAVALLI-01", "title": "Centrally Protected Monuments/Sites: Four-storeyed rock-cut Hindu temple, Undavalli", "publisher": "Archaeological Survey of India", "url": "https://asi.nic.in/pdf/CPM_List.pdf", "accessed": "2026-09-17", "supports": "Lists the four-storeyed rock-cut Hindu temple at Undavalli in Guntur district as a centrally protected monument/site."},
+    {"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-17", "supports": "Identifies the Undavalli caves near Mangalagiri as historically prominent."},
+    {"source_id": "WEB-VERIFY-UNDAVALLI-2026-09", "title": "Anantha Padmanabha Swami Temple, Undavalli", "publisher": "Guntur District, Government of Andhra Pradesh", "url": "https://guntur.ap.gov.in/slider/vundavalli-caves/", "accessed": "2026-09-17", "supports": "Official district page identifies the Anantha Padmanabha Swami Temple at Undavalli."}
   ],
   "media": [{"url": "https://cdn.s3waas.gov.in/s30777d5c17d4066b82ab86dff8a46af6f/uploads/2021/09/2024112657.png", "caption": "Anantha Padmanabha Swami Temple and Undavalli cave complex", "source_url": "https://guntur.ap.gov.in/slider/vundavalli-caves/", "credit": "Guntur District, Government of Andhra Pradesh; verify reuse terms before redistribution."}],
   "status": "partial-verification",
-  "verification_notes": "Current map/business data identifies Anantha Padmanabha Swami Temple at Undavalli. ASI independently confirms the four-storeyed rock-cut Hindu temple at Undavalli as a protected site. The exact doorway coordinate and the relationship between the named temple and the protected cave complex should be field verified."
+  "verification_notes": "The temple name/site is independently supported by the official Guntur District portal, and ASI independently confirms the protected four-storeyed rock-cut Hindu temple at Undavalli. The exact street address and doorway coordinate are not asserted beyond the site/locality level until field verification."
 }

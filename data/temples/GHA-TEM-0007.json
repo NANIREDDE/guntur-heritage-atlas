@@ -4,44 +4,14 @@
   "alternate_names": ["Guntur Balaji Temple", "Sri Venkateswara Swamy Temple, Brindavan Gardens"],
   "deity": "Venkateswara (Vishnu)",
   "locality_id": null,
-  "location": {
-    "latitude": 16.3192,
-    "longitude": 80.4415,
-    "address": "Annamayya St, Brindavan Gardens, Guntur, Andhra Pradesh 522006, India",
-    "precision": "current public street address; internal map coordinate is a map-reference approximation"
-  },
-  "history": {
-    "summary": "The temple is a current Venkateswara temple in Brindavan Gardens, Guntur. A current public listing provides the street address; the record does not assign an ancient founding date without stronger historical evidence.",
-    "founding_period": null,
-    "founder": null,
-    "renovations": []
-  },
-  "name_origin": {
-    "summary": null,
-    "evidence": []
-  },
-  "architecture": {
-    "style": null,
-    "features": []
-  },
+  "location": {"latitude": 16.3192, "longitude": 80.4415, "address": "Annamayya St, Brindavan Gardens, Guntur, Andhra Pradesh 522006, India", "precision": "current public street address; internal map coordinate is a map-reference approximation"},
+  "history": {"summary": "The temple is a current Venkateswara temple in Brindavan Gardens, Guntur. A current public listing provides the street address; the record does not assign an ancient founding date without stronger historical evidence.", "founding_period": null, "founder": null, "renovations": []},
+  "name_origin": {"summary": null, "evidence": []},
+  "architecture": {"style": null, "features": []},
   "festivals": [],
   "sources": [
-    {
-      "source_id": "WEB-VERIFY-GUNTUR-VENKATESWARA-2026-09",
-      "title": "Sri Venkateswara Swamy Vari Devalayam current address listing",
-      "publisher": "Yappe.in",
-      "url": "https://yappe.in/andhra-pradesh/guntur/sri-venkateswara-swamy-vari-devalayam/1359186",
-      "accessed": "2026-09-17",
-      "supports": "Current public listing gives Annamayya St, Brindavan Gardens, Guntur, Andhra Pradesh 522006, India."
-    },
-    {
-      "source_id": "WEB-GUNTUR-PHOTO-GALLERY-01",
-      "title": "Guntur Photo Gallery",
-      "publisher": "Government of Andhra Pradesh, Guntur District",
-      "url": "https://guntur.ap.gov.in/gallery/guntur-photo-gallery/",
-      "accessed": "2026-09-17",
-      "supports": "District government gallery includes a Ponnur Anjaneya Swamy Temple image and demonstrates the district's temple-focused heritage imagery; not used as evidence for the Brindavan Gardens temple's history."
-    }
+    {"source_id": "WEB-VERIFY-GUNTUR-VENKATESWARA-2026-09", "title": "Sri Venkateswara Swamy Vari Devalayam current address listing", "publisher": "Yappe.in", "url": "https://yappe.in/andhra-pradesh/guntur/sri-venkateswara-swamy-vari-devalayam/1359186", "accessed": "2026-09-17", "supports": "Current public listing gives Annamayya St, Brindavan Gardens, Guntur, Andhra Pradesh 522006, India."},
+    {"source_id": "WEB-GUNTUR-PHOTO-GALLERY-01", "title": "Guntur Photo Gallery", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/gallery/guntur-photo-gallery/", "accessed": "2026-09-17", "supports": "District government gallery is retained as a general district heritage/media source and is not used to establish this temple's history."}
   ],
   "media": [],
   "status": "partial-verification",

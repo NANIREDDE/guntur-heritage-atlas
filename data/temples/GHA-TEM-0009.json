@@ -1,0 +1,20 @@
+{
+  "temple_id": "GHA-TEM-0009",
+  "name": "Adi Kesavaswamy Temple, Chebrolu",
+  "alternate_names": ["Shri Aadi Keshava Swamy Devalayam", "Adi Keshava Swamy Devalayam", "Sri Kesava Swamy Temple"],
+  "deity": "Vishnu",
+  "locality_id": null,
+  "location": {"latitude": 16.194666, "longitude": 80.527504, "address": "5GVH+V26, Chebrolu, Andhra Pradesh 522212, India", "precision": "site-level public map reference; current public listing and heritage-coordinate cross-check"},
+  "history": {"summary": "Adi Kesavaswamy Temple is one of the historic temples documented at Chebrolu. A Government of India tourism/heritage list identifies Sri Kesava Swamy Temple at Chebrolu and dates it to the 11th century A.D.; a separate heritage-coordinate survey identifies Adi Keshava Swamy Devalayam at the same Chebrolu location.", "founding_period": "11th century A.D. in the Government of India heritage list; chronology is recorded as source-derived rather than independently established by this atlas", "founder": null, "renovations": []},
+  "name_origin": {"summary": "The public and heritage sources use the names Kesava Swamy and Adi Keshava Swamy for this Chebrolu temple; the atlas preserves both forms rather than selecting an unsupported preferred spelling.", "evidence": [{"source_id": "SRC-GOI-CHEBROLU-HERITAGE-01", "status": "documented-name"}, {"source_id": "WEB-VERIFY-CHEBROLU-ADIKESHAVA-2026-09", "status": "current-public-name"}]},
+  "architecture": {"style": null, "features": ["Historic Chebrolu temple within a concentrated multi-temple heritage landscape"]},
+  "festivals": [],
+  "sources": [
+    {"source_id": "SRC-GOI-CHEBROLU-HERITAGE-01", "title": "Parliament answer / heritage monuments table", "publisher": "Government of India", "url": "https://sansad.in/getFile/loksabhaquestions/annex/175/AU1072.pdf?source=pqals", "accessed": "2026-09-17", "supports": "Lists Sri Kesava Swamy Temple, Chebrolu, with an 11th-century A.D. date."},
+    {"source_id": "WEB-VERIFY-CHEBROLU-ADIKESHAVA-2026-09", "title": "Shri Aadi Keshava Swamy Devalayam current address listing", "publisher": "Yappe.in", "url": "https://yappe.in/andhra-pradesh/chebrolu/shri-aadi-keshava-swamy-devalayam/768623", "accessed": "2026-09-17", "supports": "Provides the current public address Chebrolu, Andhra Pradesh 522212 and the current public temple name."},
+    {"source_id": "SRC-HERITAGE-GPS-CHEBROLU-01", "title": "Historic heritage sites of Andhra Pradesh with GPS coordinates", "publisher": "Wikimedia Commons / field-survey compilation", "url": "https://commons.wikimedia.org/wiki/File:Historic_heritage_sites_of_Andhra_Pradesh_with_GPS_coordinates.jpg", "accessed": "2026-09-17", "supports": "Lists Adi Keshava Swamy Devalayam, Chebrolu at 16.194666, 80.527504; used as an internal coordinate cross-check only."}
+  ],
+  "media": [],
+  "status": "partial-verification",
+  "verification_notes": "Current locality/address and temple identity are supported by a current public listing. The 11th-century date is source-derived from a Government of India heritage table and is not independently promoted to a definitive architectural chronology. Coordinates are internal map-reference data only and are not displayed in the temple profile."
+}

@@ -1,0 +1,20 @@
+{
+  "temple_id": "GHA-TEM-0010",
+  "name": "Sri Bheemeswara Swamy Temple, Chebrolu",
+  "alternate_names": ["Bheemeswaraswamy Temple", "Bhimeswara Swamy Temple", "Sri Bheemeswara Swamy Temple"],
+  "deity": "Shiva",
+  "locality_id": null,
+  "location": {"latitude": 16.194879, "longitude": 80.526966, "address": "5GVG+WRG, Chebrolu, Andhra Pradesh 522212, India", "precision": "site-level public map reference; current public map/business cross-check"},
+  "history": {"summary": "Sri Bheemeswara Swamy Temple is one of the historic Chebrolu temples documented in Government of India heritage material. The Government of India table lists the temple at Chebrolu with an 11th-century A.D. date, while current public map data places the temple in Chebrolu, Andhra Pradesh 522212.", "founding_period": "11th century A.D. in the Government of India heritage list; chronology remains source-derived", "founder": null, "renovations": []},
+  "name_origin": {"summary": "The documented name is Bheemeswara/Bhimeswara Swamy Temple; the atlas preserves the current public spelling alongside the spelling used in the Government of India source.", "evidence": [{"source_id": "SRC-GOI-CHEBROLU-HERITAGE-01", "status": "documented-name"}, {"source_id": "WEB-VERIFY-CHEBROLU-BHEEMESWARA-2026-09", "status": "current-public-name"}]},
+  "architecture": {"style": null, "features": ["Historic Chebrolu temple within a concentrated multi-temple heritage landscape"]},
+  "festivals": [],
+  "sources": [
+    {"source_id": "SRC-GOI-CHEBROLU-HERITAGE-01", "title": "Parliament answer / heritage monuments table", "publisher": "Government of India", "url": "https://sansad.in/getFile/loksabhaquestions/annex/175/AU1072.pdf?source=pqals", "accessed": "2026-09-17", "supports": "Lists Sri Bheemeswara Swamy Temple, Chebrolu, with an 11th-century A.D. date."},
+    {"source_id": "WEB-VERIFY-CHEBROLU-BHEEMESWARA-2026-09", "title": "Sri Bheemeswara Swamy Temple current map/business listing", "publisher": "Public map/business listing", "url": "https://www.google.com/maps/search/Sri+Bheemeswara+Swamy+Temple+Chebrolu", "accessed": "2026-09-17", "supports": "Current public map reference for the temple name and address 5GVG+WRG, Chebrolu, Andhra Pradesh 522212."},
+    {"source_id": "SRC-HERITAGE-GPS-CHEBROLU-01", "title": "Historic heritage sites of Andhra Pradesh with GPS coordinates", "publisher": "Wikimedia Commons / field-survey compilation", "url": "https://commons.wikimedia.org/wiki/File:Historic_heritage_sites_of_Andhra_Pradesh_with_GPS_coordinates.jpg", "accessed": "2026-09-17", "supports": "Lists Bheemeswara Swamy Temple, Chebrolu at 16.194879, 80.526966; used as an internal coordinate cross-check only."}
+  ],
+  "media": [],
+  "status": "partial-verification",
+  "verification_notes": "Temple identity and current locality/address are supported by public map data and the Government of India heritage table. The 11th-century date is source-derived and is not treated as a fully independently verified architectural chronology. Coordinates are internal map-reference data only and are not displayed in the temple profile."
+}

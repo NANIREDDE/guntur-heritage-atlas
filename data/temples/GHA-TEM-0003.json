@@ -1,0 +1,26 @@
+{
+  "temple_id": "GHA-TEM-0003",
+  "name": "Bhavanarayana Swamy Temple",
+  "alternate_names": ["Sakshi Bhavanarayana Swamy Temple"],
+  "deity": "Vishnu",
+  "locality_id": "GHA-LOC-0003",
+  "location": {
+    "latitude": 16.07114,
+    "longitude": 80.54944,
+    "address": "Sri Sakshi Bhavanarayana Swamy Temple, Ponnur Town, Ponnur Mandal, Guntur District, Andhra Pradesh 522124, India",
+    "precision": "town-level address supported by current temple information and map/business data; no street address added without stronger verification"
+  },
+  "history": {
+    "summary": "The Guntur District tourism portal identifies the Bhavanarayana Swamy temple as a prominent place of worship in Ponnur.",
+    "founding_period": null,
+    "founder": null,
+    "renovations": []
+  },
+  "name_origin": {"summary": null, "evidence": []},
+  "architecture": {"style": null, "features": []},
+  "festivals": [],
+  "sources": [{"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-17", "supports": "Identifies Ponnur and its Bhavanarayana Swamy temple as a prominent pilgrimage site."}, {"source_id": "WEB-VERIFY-BHAVANARAYANA-2026-09", "title": "Sri Sakshi Bhavanarayana Swamy Temple, Ponnur — current address", "publisher": "Temples.bio", "url": "https://www.temples.bio/temples/sri-bhavanarayana-swamy-temple-ponnur/timings", "accessed": "2026-09-17", "supports": "Gives the temple address as Ponnur Town, Ponnur Mandal, Guntur District, Andhra Pradesh 522124."}],
+  "media": [{"url": "https://sp-ao.shortpixel.ai/client/to_webp%2Cq_glossy%2Cret_img%2Cw_768%2Ch_1024/https%3A/explorebyroad.blog/wp-content/uploads/2021/09/img_2231-768x1024.jpg", "caption": "Sakshi Bhavanarayana Swamy Temple gopuram", "source_url": "https://explorebyroad.blog/a-trip-to-ponnur-and-temples-you-should-visit/", "credit": "Explore By Road; verify image license before redistribution."}],
+  "status": "partial-verification",
+  "verification_notes": "Current business/map data and a current temple information page identify the temple in Ponnur at PIN 522124. A more specific street address and doorway coordinate are not sufficiently corroborated, so the atlas deliberately keeps the broader address."
+}

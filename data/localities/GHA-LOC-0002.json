@@ -1,0 +1,39 @@
+{
+  "locality_id": "GHA-LOC-0002",
+  "name": "Mangalagiri",
+  "type": "town",
+  "administrative_context": {
+    "current_district": "Guntur",
+    "state": "Andhra Pradesh",
+    "country": "India"
+  },
+  "historical_names": [],
+  "name_origin": {
+    "summary": "The Guntur District One District One Product page translates Mangalagiri as 'Auspicious Hill' (Mangala = auspicious, Giri = hill).",
+    "status": "documented-government-source",
+    "claims": [
+      {
+        "claim": "Mangalagiri is translated as 'Auspicious Hill'.",
+        "status": "documented-government-source",
+        "source_id": "SRC-GUN-ODOP-MANGALAGIRI-01"
+      }
+    ]
+  },
+  "history": {
+    "summary": "The district tourism and ODOP pages describe Mangalagiri as an established pilgrimage centre associated with the Panakala Narasimha Swamy temple.",
+    "status": "documented-government-source",
+    "source_ids": [
+      "SRC-GUN-TOURISM-01",
+      "SRC-GUN-ODOP-MANGALAGIRI-01"
+    ]
+  },
+  "heritage_sites": [
+    "GHA-TEM-0002"
+  ],
+  "sources": [
+    "SRC-GUN-TOURISM-01",
+    "SRC-GUN-ODOP-MANGALAGIRI-01"
+  ],
+  "status": "partial-verification",
+  "verification_notes": "The translation is recorded as a government-published explanation. Additional historical and epigraphic evidence should be collected before treating it as the only historical origin."
+}

@@ -1,0 +1,29 @@
+{
+  "temple_id": "GHA-TEM-0002",
+  "name": "Panakala Lakshmi Narasimha Swamy Temple",
+  "alternate_names": ["Panakala Swamy Temple", "Panakala Narasimha Swamy Temple"],
+  "deity": "Narasimha",
+  "locality_id": "GHA-LOC-0002",
+  "location": {
+    "latitude": 16.44,
+    "longitude": 80.56,
+    "address": "Panakala Narasimha Swamy Temple Road, Mangalagiri, Guntur District, Andhra Pradesh 522503, India",
+    "precision": "address independently matched against the temple's public site and current map/business information; coordinates remain map-reference data"
+  },
+  "history": {
+    "summary": "The Guntur District tourism portal identifies Mangalagiri as a long-established pilgrimage centre and describes the Panakala Lakshmi Narasimha Swamy temple on Mangalagiri hill.",
+    "founding_period": null,
+    "founder": null,
+    "renovations": []
+  },
+  "name_origin": {
+    "summary": "Government tourism material describes Mangalagiri as a hill of bliss and the deity as Panakala Narasimha Swamy because of the traditional jaggery-water offering.",
+    "evidence": [{"source_id": "SRC-GUN-TOURISM-01", "status": "documented-government-source"}]
+  },
+  "architecture": {"style": null, "features": []},
+  "festivals": [],
+  "sources": [{"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-17", "supports": "Identifies Mangalagiri as a pilgrimage centre and describes Panakala Lakshmi Narasimha Swamy Temple."}, {"source_id": "WEB-VERIFY-PANAKALA-2026-09", "title": "Sri Panakala Lakshmi Narasimha Swamy Temple — Temple Location", "publisher": "Sri Panakala Lakshmi Narasimha Swamy Temple", "url": "https://panakalanarasimhaswamy.org/", "accessed": "2026-09-17", "supports": "The temple's public site gives Panakala Narasimha Swamy Temple Road, Mangalagiri, Guntur District, Andhra Pradesh 522503."}],
+  "media": [{"url": "https://cdn.s3waas.gov.in/s30777d5c17d4066b82ab86dff8a46af6f/uploads/2022/04/2024112336.jpg", "caption": "Mangalagiri hill and temple skyline", "source_url": "https://guntur.ap.gov.in/slider/mangalagiri/", "credit": "Guntur District, Government of Andhra Pradesh; verify reuse terms before redistribution."}],
+  "status": "partial-verification",
+  "verification_notes": "Address is directly supported by the temple's public site and consistent with current map/business information. Construction chronology, inscriptions and exact doorway coordinate still require source-level verification."
+}

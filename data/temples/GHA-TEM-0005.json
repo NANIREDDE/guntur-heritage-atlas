@@ -7,8 +7,8 @@
   "location": {
     "latitude": 16.49724,
     "longitude": 80.58224,
-    "address": "Undavalli, Tadepalle, Guntur District, Andhra Pradesh, India",
-    "precision": "nearby-site reference; temple-specific coordinate should be field verified"
+    "address": "Undavalli, Tadepalle, Andhra Pradesh 522501, India",
+    "precision": "site-level public map/business address; exact temple doorway versus cave-complex coordinate should be field verified"
   },
   "history": {
     "summary": "The Guntur District portal identifies the Anantha Padmanabha Swami Temple at Undavalli, while the Archaeological Survey of India lists the four-storeyed rock-cut Hindu temple at Undavalli as a centrally protected monument/site.",
@@ -25,5 +25,5 @@
   ],
   "media": [{"url": "https://cdn.s3waas.gov.in/s30777d5c17d4066b82ab86dff8a46af6f/uploads/2021/09/2024112657.png", "caption": "Anantha Padmanabha Swami Temple and Undavalli cave complex", "source_url": "https://guntur.ap.gov.in/slider/vundavalli-caves/", "credit": "Guntur District, Government of Andhra Pradesh; verify reuse terms before redistribution."}],
   "status": "partial-verification",
-  "verification_notes": "The displayed coordinate is a nearby-site reference from a map listing; the exact temple doorway should be field verified. Temple-specific chronology and the relationship between the temple and protected rock-cut complex require separate architectural and archaeological verification."
+  "verification_notes": "Current map/business data identifies Anantha Padmanabha Swami Temple at Undavalli. ASI independently confirms the four-storeyed rock-cut Hindu temple at Undavalli as a protected site. The exact doorway coordinate and the relationship between the named temple and the protected cave complex should be field verified."
 }

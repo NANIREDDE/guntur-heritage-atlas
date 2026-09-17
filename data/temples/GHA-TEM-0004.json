@@ -7,11 +7,11 @@
   "location": {
     "latitude": 16.3361,
     "longitude": 80.4982,
-    "address": "Guntur - Vijayawada Highway, Pedakakani, Guntur, Andhra Pradesh 522509, India",
-    "precision": "temple-level public map/business address; field verification still recommended"
+    "address": "Main Road, Pedakakani, Guntur District, Andhra Pradesh 522509, India",
+    "precision": "current public listings consistently identify Main Road/Pedakakani; coordinates remain map-reference data and should be field verified"
   },
   "history": {
-    "summary": "The 1961 Census of India volume records Sri Malleswaraswamy among the principal places of worship in Pedakakani. Guntur District tourism also identifies Pedakakani as a prominent temple area.",
+    "summary": "The 1961 Census of India volume records Sri Malleswaraswamy among the principal places of worship in Pedakakani. Guntur District tourism also identifies Pedakakani among the district's prominent temple areas.",
     "founding_period": null,
     "founder": null,
     "renovations": []
@@ -20,10 +20,11 @@
   "architecture": {"style": null, "features": []},
   "festivals": [],
   "sources": [
-    {"source_id": "SRC-GUN-CENSUS-1961-PEDAKAKANI-01", "title": "Fairs and Festivals, Guntur, 1961 Census of India", "publisher": "Office of the Registrar General, Census of India", "url": "https://censusindia.gov.in/nada/index.php/catalog/30147/download/33328/41956_1961_GUN.pdf", "accessed": "2026-09-16", "supports": "Records Sri Malleswaraswamy as one of the main places of worship in Pedakakani."},
-    {"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-16", "supports": "Identifies Pedakakani as one of the district's prominent temple areas."}
+    {"source_id": "SRC-GUN-CENSUS-1961-PEDAKAKANI-01", "title": "Fairs and Festivals, Guntur, 1961 Census of India", "publisher": "Office of the Registrar General, Census of India", "url": "https://censusindia.gov.in/nada/index.php/catalog/30147/download/33328/41956_1961_GUN.pdf", "accessed": "2026-09-17", "supports": "Records Sri Malleswaraswamy as one of the main places of worship in Pedakakani."},
+    {"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-17", "supports": "Identifies Pedakakani among the district's prominent temple areas."},
+    {"source_id": "WEB-VERIFY-PEDAKAKANI-2026-09", "title": "Pedakakani Sri Malleswara Swamy Temple — address and contact listing", "publisher": "Temples in India Info", "url": "https://templesinindiainfo.com/pedakakani-sri-malleswara-swamy-temple-puja-address-timings/", "accessed": "2026-09-17", "supports": "Lists Sri Malleswara Swamy Temple, Pedakakani Mandalam, Guntur District, Andhra Pradesh 522509; another current listing gives Main Road, Pedakakani, Guntur 522509."}
   ],
   "media": [{"url": "https://3.bp.blogspot.com/-aHiEpw9qlF4/XJcX2K20bpI/AAAAAAAACr4/jN0RTlI12xUynvbW11J4E0XR2iOl6N77gCLcBGAs/s1600/Sri%2BMalleshwara%2BSwamy%2BTemple%2Bin%2BPedakakani.JPG", "caption": "Pedakakani Sri Malleswara Swamy Temple gopuram", "source_url": "https://indiantempleslist.blogspot.com/2016/01/pedakakani-sri-bramarambha-malleswara-swamy-temple-guntur.html", "credit": "Indian Temples List; verify image license before redistribution."}],
   "status": "partial-verification",
-  "verification_notes": "Current public map/business listings place the temple on/near the Guntur-Vijayawada Highway in Pedakakani. The 1961 source confirms the historical worship record, but current institutional and architectural details still need additional verification."
+  "verification_notes": "The current address is supported at the Pedakakani/Main Road level by multiple public listings. The 1961 source independently confirms the historical worship record. Exact doorway coordinate and institutional details still need field/source verification."
 }

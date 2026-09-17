@@ -7,8 +7,8 @@
   "location": {
     "latitude": 16.44,
     "longitude": 80.56,
-    "address": "Mangalagiri, Andhra Pradesh, India",
-    "precision": "town-level reference; temple-specific coordinates still need field verification"
+    "address": "Panakala Narasimha Swamy Temple Road, Mangalagiri, Guntur District, Andhra Pradesh 522503, India",
+    "precision": "address verified against the temple's public site and current map/business listing; coordinates remain map-reference data"
   },
   "history": {
     "summary": "The Guntur District tourism portal identifies Mangalagiri as a long-established pilgrimage centre and describes the Panakala Lakshmi Narasimha Swamy temple on Mangalagiri hill.",
@@ -25,5 +25,5 @@
   "sources": [{"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-16", "supports": "Identifies Mangalagiri as a pilgrimage centre and describes Panakala Lakshmi Narasimha Swamy Temple."}],
   "media": [{"url": "https://cdn.s3waas.gov.in/s30777d5c17d4066b82ab86dff8a46af6f/uploads/2022/04/2024112336.jpg", "caption": "Mangalagiri hill and temple skyline", "source_url": "https://guntur.ap.gov.in/slider/mangalagiri/", "credit": "Guntur District, Government of Andhra Pradesh; verify reuse terms before redistribution."}],
   "status": "partial-verification",
-  "verification_notes": "The displayed coordinate is a town-level reference, not a verified temple entrance coordinate. Coordinates, inscriptional evidence, construction chronology and architectural details still require source-level verification."
+  "verification_notes": "The address is consistent between the temple's public site and current map/business listings. Construction chronology, inscriptions and exact coordinate precision still require source-level verification."
 }

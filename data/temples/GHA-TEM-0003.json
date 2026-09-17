@@ -7,8 +7,8 @@
   "location": {
     "latitude": 16.07114,
     "longitude": 80.54944,
-    "address": "Ponnur, Guntur District, Andhra Pradesh, India",
-    "precision": "town-level reference; temple-specific coordinates still need field verification"
+    "address": "Ponnur, Andhra Pradesh 522124, India",
+    "precision": "town-level address; current map/business listing identifies the temple in Ponnur, but a more specific street address should be field verified"
   },
   "history": {
     "summary": "The Guntur District tourism page identifies the Bhavanarayana Swamy temple as a prominent place of worship in Ponnur.",
@@ -22,5 +22,5 @@
   "sources": [{"source_id": "SRC-GUN-TOURISM-01", "title": "Tourism | Guntur District", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/tourism/", "accessed": "2026-09-16", "supports": "Identifies Ponnur and its Bhavanarayana Swamy temple as a prominent pilgrimage site."}],
   "media": [{"url": "https://sp-ao.shortpixel.ai/client/to_webp%2Cq_glossy%2Cret_img%2Cw_768%2Ch_1024/https%3A/explorebyroad.blog/wp-content/uploads/2021/09/img_2231-768x1024.jpg", "caption": "Sakshi Bhavanarayana Swamy Temple gopuram", "source_url": "https://explorebyroad.blog/a-trip-to-ponnur-and-temples-you-should-visit/", "credit": "Explore By Road; verify image license before redistribution."}],
   "status": "partial-verification",
-  "verification_notes": "The displayed coordinate is a town-level reference, not a verified temple entrance coordinate. Coordinates, inscriptions, construction chronology, architecture and temple-institution records still require verification."
+  "verification_notes": "Current map/business data identifies Sri Sakshi Bhavanarayana Swamy Temple in Ponnur (plus code 3GCX+7XF). The public sources checked do not provide a more specific street address, so the record keeps the town-level address rather than guessing."
 }

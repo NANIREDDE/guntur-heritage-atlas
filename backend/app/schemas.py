@@ -37,10 +37,6 @@ class TempleDetail(TempleSummary):
     media: list[MediaSummary] = []
 
 
-class LocalitySummary(LocalitySummary):
-    pass
-
-
 class LocalitySummary(BaseModel):
     id: str = Field(description="Stable locality identifier")
     name: str

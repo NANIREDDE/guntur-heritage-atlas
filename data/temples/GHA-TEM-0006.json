@@ -4,64 +4,18 @@
   "alternate_names": ["Chaturmukha Brahma Temple", "Chebrolu Brahma Temple"],
   "deity": "Brahma and Shiva",
   "locality_id": null,
-  "location": {
-    "latitude": 16.196201,
-    "longitude": 80.527081,
-    "address": "Chebrolu, Guntur District, Andhra Pradesh 522212, India",
-    "precision": "site-level public map reference; exact doorway coordinate should be field verified"
-  },
-  "history": {
-    "summary": "The Government of Andhra Pradesh Guntur District portal identifies the Chathurmukha Brahma Lingeswara Swamy Temple at Chebrolu. Historical census material also records older temple traditions at Chebrolu, including Mahaseva and Kumaraswamy worship, while a state-protected-monument listing identifies a Chathurmukha Brahma temple at Chebrolu.",
-    "founding_period": "13th century A.D. in the state-protected-monument listing; chronology should be treated as provisional until checked against the underlying government monument register",
-    "founder": null,
-    "renovations": []
-  },
-  "name_origin": {
-    "summary": "The name Chathurmukha Brahma refers to Brahma's four-faced form; the association with the Lingeswara shrine is reflected in the temple's commonly used name.",
-    "evidence": [
-      {"source_id": "WEB-VERIFY-CHEBROLU-BRAHMA-2026-09", "status": "documented-name"}
-    ]
-  },
-  "architecture": {
-    "style": null,
-    "features": ["Temple complex associated with Chebrolu's protected historic temple group"]
-  },
+  "location": {"latitude": 16.196201, "longitude": 80.527081, "address": "Chebrolu, Guntur District, Andhra Pradesh 522212, India", "precision": "site-level public map reference; exact doorway coordinate should be field verified"},
+  "history": {"summary": "The Government of Andhra Pradesh Guntur District portal identifies the Chathurmukha Brahma Lingeswara Swamy Temple at Chebrolu. Historical census material also records older temple traditions at Chebrolu, including Mahaseva and Kumaraswamy worship, while a state-protected-monument listing identifies a Chathurmukha Brahma temple at Chebrolu.", "founding_period": "13th century A.D. in the state-protected-monument listing; chronology should be treated as provisional until checked against the underlying government monument register", "founder": null, "renovations": []},
+  "name_origin": {"summary": "The name Chathurmukha Brahma refers to Brahma's four-faced form; the association with the Lingeswara shrine is reflected in the temple's commonly used name.", "evidence": [{"source_id": "WEB-VERIFY-CHEBROLU-BRAHMA-2026-09", "status": "documented-name"}]},
+  "architecture": {"style": null, "features": ["Temple complex associated with Chebrolu's protected historic temple group"]},
   "festivals": [],
   "sources": [
-    {
-      "source_id": "SRC-GUN-CHEBROLU-PORTAL-01",
-      "title": "Guntur District Portal",
-      "publisher": "Government of Andhra Pradesh, Guntur District",
-      "url": "https://guntur.ap.gov.in/",
-      "accessed": "2026-09-17",
-      "supports": "Identifies Chathurmukha Brahma Lingeswara Swamy Temple, Chebrolu, as a district heritage/tourism image and place reference."
-    },
-    {
-      "source_id": "SRC-CENSUS-1961-GUNTUR-01",
-      "title": "Fairs and Festivals, (6 Guntur), Part VII-B (6), Vol-II",
-      "publisher": "Census of India, 1961",
-      "url": "https://censusindia.gov.in/nada/index.php/catalog/30147/download/33328/41956_1961_GUN.pdf",
-      "accessed": "2026-09-17",
-      "supports": "Records historical temple and festival traditions at Chebrolu, including Mahaseva and Kumaraswamy temple references."
-    },
-    {
-      "source_id": "WEB-VERIFY-CHEBROLU-BRAHMA-2026-09",
-      "title": "Chaturmukha Brahma Lingeshwara Temple Timings, History",
-      "publisher": "Temples in India Info",
-      "url": "https://templesinindiainfo.com/chaturmukha-brahma-lingeshwara-temple-timings-history/",
-      "accessed": "2026-09-17",
-      "supports": "Provides the current public locality/address reference for the temple and identifies the commonly used Chaturmukha Brahma Lingeshwara name."
-    },
-    {
-      "source_id": "WEB-STATE-PROTECTED-CHEBROLU-01",
-      "title": "State Protected Monuments in Andhra Pradesh — Chathurmukha Brahma temple, Chebrolu",
-      "publisher": "State protected monument list reference",
-      "url": "https://en.chped.com/wiki/List_of_State_Protected_Monuments_in_Andhra_Pradesh",
-      "accessed": "2026-09-17",
-      "supports": "Lists Chathurmukha Brahma temple at Chebrolu as S-AP-126 and gives a 13th-century A.D. date in the reproduced state-protected-monument table."
-    }
+    {"source_id": "SRC-GUN-CHEBROLU-PORTAL-01", "title": "Guntur District Portal", "publisher": "Government of Andhra Pradesh, Guntur District", "url": "https://guntur.ap.gov.in/", "accessed": "2026-09-17", "supports": "Identifies Chathurmukha Brahma Lingeswara Swamy Temple, Chebrolu, as a district heritage/tourism place reference."},
+    {"source_id": "SRC-CENSUS-1961-GUNTUR-01", "title": "Fairs and Festivals, (6 Guntur), Part VII-B (6), Vol-II", "publisher": "Census of India, 1961", "url": "https://censusindia.gov.in/nada/index.php/catalog/30147/download/33328/41956_1961_GUN.pdf", "accessed": "2026-09-17", "supports": "Records historical temple and festival traditions at Chebrolu, including Mahaseva and Kumaraswamy temple references."},
+    {"source_id": "WEB-VERIFY-CHEBROLU-BRAHMA-2026-09", "title": "Chaturmukha Brahma Lingeshwara Temple Timings, History", "publisher": "Temples in India Info", "url": "https://templesinindiainfo.com/chaturmukha-brahma-lingeshwara-temple-timings-history/", "accessed": "2026-09-17", "supports": "Provides the current public locality/address reference and commonly used temple name."},
+    {"source_id": "WEB-STATE-PROTECTED-CHEBROLU-01", "title": "State Protected Monuments in Andhra Pradesh — Chathurmukha Brahma temple, Chebrolu", "publisher": "State protected monument list reference", "url": "https://en.chped.com/wiki/List_of_State_Protected_Monuments_in_Andhra_Pradesh", "accessed": "2026-09-17", "supports": "Lists Chathurmukha Brahma temple at Chebrolu as S-AP-126 and gives a 13th-century A.D. date in the reproduced table."}
   ],
   "media": [],
   "status": "partial-verification",
-  "verification_notes": "The temple identity and Chebrolu locality are supported by the current Guntur District government portal. A public current listing provides the locality/pincode address. The historical date comes from a reproduced state-protected-monument list and should be independently checked against the original state register before being treated as definitive. Coordinates are internal map-reference data only."
+  "verification_notes": "The temple identity and Chebrolu locality are supported by the current Guntur District government portal. The historical date comes from a reproduced state-protected-monument list and should be independently checked against the original state register before being treated as definitive. Coordinates are internal map-reference data only."
 }

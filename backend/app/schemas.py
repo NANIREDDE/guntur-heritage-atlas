@@ -3,7 +3,6 @@ from pydantic import BaseModel, ConfigDict, Field
 
 class SourceSummary(BaseModel):
     model_config = ConfigDict(from_attributes=True)
-
     id: str = Field(description="Stable source identifier")
     title: str
     publisher: str | None = None
@@ -11,9 +10,15 @@ class SourceSummary(BaseModel):
     source_type: str | None = None
 
 
+class MediaSummary(BaseModel):
+    url: str
+    caption: str | None = None
+    source_url: str | None = None
+    credit: str | None = None
+
+
 class TempleSummary(BaseModel):
     model_config = ConfigDict(from_attributes=True)
-
     id: str = Field(description="Stable Guntur Heritage Atlas identifier")
     name: str
     city: str
@@ -28,6 +33,7 @@ class TempleDetail(TempleSummary):
     description: str | None = None
     evidence: str
     sources: list[SourceSummary] = []
+    media: list[MediaSummary] = []
 
 
 class LocalitySummary(BaseModel):

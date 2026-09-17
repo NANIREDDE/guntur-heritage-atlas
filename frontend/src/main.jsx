@@ -5,7 +5,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./styles.css";
 
-const API = "http://localhost:8000/api";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
 const fallbackTemples = [
   { id: "GHA-TEM-0001", name: "Agastyeshwara Sivalayam", city: "Guntur", status: "partial-verification", latitude: 16.3008, longitude: 80.4428, address: "Sivalayam Rd, Christian Pet, Old Guntur, Guntur, Andhra Pradesh 522001, India" },
@@ -75,10 +75,11 @@ function App() {
     <footer><span>Guntur Heritage Atlas</span><span>Evidence before claims · Research edition</span></footer>
     {selected && <div className="overlay" onClick={() => setSelected(null)}><aside className="detail-panel" onClick={e => e.stopPropagation()}><button className="close" onClick={() => setSelected(null)}>×</button><p className="eyebrow">{selected.type === "historical" ? "Historical source record" : selected.type}</p><h2>{selected.type === "historical" ? selected.data.locality : selected.data.name}</h2>
       {selected.type === "temple" && <><div className="tag">{selected.data.status}</div>{(selected.data.media || []).length > 0 && <div className="photo-gallery">{selected.data.media.map(photo => <figure key={photo.url}><img src={photo.url} alt={photo.caption || selected.data.name} /><figcaption>{photo.caption}{photo.credit && <small>{photo.credit}</small>}</figcaption></figure>)}</div>}<p>{selected.data.description || "A research record in the Guntur Heritage Atlas."}</p><div className="location-box"><strong>📍 Address</strong><span>{selected.data.address || "Address not yet verified."}</span><small>Use this address to manually search the temple in Google Maps or another map service.</small></div><h3>Evidence</h3><p className="muted">This record is currently marked <strong>{selected.data.evidence}</strong>. Historical claims are kept separate from tradition until verified.</p><h3>Sources</h3><ul>{(selected.data.sources || []).map(s => <li key={s.id}>{s.title}{s.publisher ? ` — ${s.publisher}` : ""}</li>)}</ul></>}
-      {selected.type === "historical" && <><div className="tag">Census 1961 · Historical Guntur Taluk</div><p><strong>{selected.data.deity}</strong></p><p>Festival period recorded in the index: <strong>{selected.data.festival_period}</strong>.</p>{selected.data.narrative ? <><h3>Historical context</h3><ul>{selected.data.narrative.notes.map(note => <li key={note}>{note}</li>)}</ul></> : <p className="muted">The 1961 index records this locality, deity and festival period. A separate narrative note has not yet been added for this locality.</p>}<h3>Source boundary</h3><p className="muted">This is a historical administrative snapshot. Its appearance here does not automatically mean the same temple entry is a current verified record.</p></>}
-      {selected.type === "locality" && <><div className="tag">{selected.data.status}</div><p>{selected.data.history || "Locality research is being assembled."}</p><h3>Why the name?</h3><p>{selected.data.name_origin || "Name-origin research has not yet been verified."}</p><h3>Connected temples</h3><ul>{(selected.data.temples || []).map(t => <li key={t.id}>{t.name}</li>)}</ul></>}
-      {selected.type === "route" && <><div className="tag">Research route</div><p>{selected.data.description}</p><h3>Stops</h3><ol>{(selected.data.stops || []).map(stop => <li key={stop.order}><button className="route-link" onClick={() => openTemple(stop.entity_id)}>{stop.name}</button></li>)}</ol><h3>Route boundary</h3><p className="muted">This is a planning route connecting atlas records. It does not claim an ancient travel sequence.</p></>}
+      {selected.type === "historical" && <><div className="tag">Census 1961 · Historical Guntur Taluk</div><p><strong>{selected.data.deity}</strong></p><p>Festival period: {selected.data.festival_period}</p>{selected.data.narrative && <><h3>Research note</h3><p>{selected.data.narrative.narrative}</p></>}<h3>Source</h3><p className="muted">Census of India, 1961 — Fairs and Festivals, Guntur.</p></>}
+      {selected.type === "locality" && <><div className="tag">{selected.data.status}</div><p>{selected.data.history || "Locality research record."}</p><h3>Name origin</h3><p>{selected.data.name_origin || "Not yet documented."}</p><h3>Sources</h3><ul>{(selected.data.sources || []).map(s => <li key={s.id}>{s.title}{s.publisher ? ` — ${s.publisher}` : ""}</li>)}</ul></>}
+      {selected.type === "route" && <><div className="tag">Research route</div><p>{selected.data.description}</p><h3>Stops</h3><ol>{(selected.data.stops || []).map(stop => <li key={stop.order}>{stop.name}</li>)}</ol></>}
     </aside></div>}
   </div>;
 }
+
 createRoot(document.getElementById("root")).render(<App />);

@@ -28,12 +28,17 @@ class TempleSummary(BaseModel):
 class TempleDetail(TempleSummary):
     deity: str | None = None
     locality: str | None = None
+    address: str | None = None
     latitude: float | None = None
     longitude: float | None = None
     description: str | None = None
     evidence: str
     sources: list[SourceSummary] = []
     media: list[MediaSummary] = []
+
+
+class LocalitySummary(LocalitySummary):
+    pass
 
 
 class LocalitySummary(BaseModel):
